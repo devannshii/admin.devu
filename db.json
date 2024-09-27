@@ -1,0 +1,14 @@
+{
+  "products": [
+    {
+      "name": "smart-phones",
+      "number": 78,
+      "id": "2e5a"
+    },
+    {
+      "name": "chargers",
+      "number": 895,
+      "id": "48f9"
+    }
+  ]
+}

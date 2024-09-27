@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Operations</title>
+    <link rel="stylesheet" href="d.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <aside>
+        <div class="slidebar">
+            <h3>Task Manager</h3>
+            <a href="#">Home</a>
+            <a href="#">Tasks</a>
+        </div>
+    </aside>
+
+    <!-- Main Section -->
+    <main>
+        <h1>Task Manager</h1>
+
+        <!-- Form to Add Task -->
+        <div class="task-form">
+            <input type="text" id="taskInput" placeholder="Enter new task...">
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+
+        <!-- Task List -->
+        <div class="task-list">
+            <h2>Your Tasks</h2>
+            <ul id="taskList">
+                <!-- Task items will be rendered here dynamically -->
+            </ul>
+        </div>
+    </main>
+
+    <script src="d.js"></script>
+</body>
+</html>

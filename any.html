@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electronics Product CRUD Operations</title>
+</head>
+<body>
+  <h1>Electronics Product CRUD Operations</h1>
+
+  <div>
+    <input type="text" id="productName" placeholder="Enter electronics product name" />
+    <button onclick="addProduct()">Add Electronics Product</button>
+  </div>
+
+  <h3>Electronics Product List</h3>
+  <ul id="productList"></ul>
+
+  <script>
+    let products = [];
+    let nextId = 1;
+
+    // CREATE - Add a new electronics product
+    function addProduct() {
+      const productName = document.getElementById("productName").value;
+      if (productName === '') {
+        alert("Product name cannot be empty!");
+        return;
+      }
+
+      const product = { id: nextId++, name: productName, category: "Electronics" };
+      products.push(product);
+      document.getElementById("productName").value = ''; // Clear input
+      displayProducts();
+    }
+
+    // READ - Display all electronics products
+    function displayProducts() {
+      const productList = document.getElementById("productList");
+      productList.innerHTML = '';
+
+      products.forEach(product => {
+        const li = document.createElement("li");
+        li.innerHTML = `${product.name} <button onclick="editProduct(${product.id})">Edit</button>
+                        <button onclick="deleteProduct(${product.id})">Delete</button>`;
+        productList.appendChild(li);
+      });
+    }
+
+    // UPDATE - Edit a product name
+    function editProduct(id) {
+      const newName = prompt("Enter the new product name:");
+      if (newName === null || newName === '') {
+        alert("Product name cannot be empty!");
+        return;
+      }
+
+      const product = products.find(p => p.id === id);
+      if (product) {
+        product.name = newName;
+        displayProducts();
+      }
+    }
+
+    // DELETE - Remove a product
+    function deleteProduct(id) {
+      products = products.filter(product => product.id !== id);
+      displayProducts();
+    }
+
+    // Initial display
+    displayProducts();
+  </script>
+</body>
+</html>

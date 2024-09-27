@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f6f6f9;
+}
+
+aside {
+    background-color: #7380ec;
+    width: 14rem;
+    height: 100vh;
+    position: fixed;
+}
+
+aside .slidebar {
+    margin: 2rem;
+}
+
+aside .slidebar h3, a {
+    color: white;
+    margin: 1rem 0;
+    display: block;
+}
+
+main {
+    margin-left: 16rem;
+    padding: 2rem;
+}
+
+.task-form {
+    margin-bottom: 2rem;
+}
+
+.task-form input {
+    padding: 0.5rem;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.task-form button {
+    padding: 0.5rem 1rem;
+    background-color: #41f1b6;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.task-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-list li {
+    background-color: white;
+    margin: 1rem 0;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.task-list button {
+    padding: 0.3rem 0.6rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background-color: #ff7782;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #ff4edc;
+    color: white;
+}
